@@ -48,10 +48,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp W         &kp E             &kp R  &kp T                                           &kp Y             &kp U  &lt 5 I    &kp O    &kp P
-&kp A    &kp S         &kp D             &kp F  &kp G                            &kp MINUS      &kp H             &kp J  &kp K      &kp L    &kp SQT
-&kp Z    &kp X         &kp C             &kp V  &kp B             &lt 4 ESC      &kp SEMICOLON  &kp N             &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH
-&kp TAB  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 1  &lt 2 LANGUAGE_2  &lt 3 SPACE    &lt 1 ENTER    &lt 1 LANGUAGE_1                             &kp BACKSPACE
+&kp Q    &kp W         &kp E             &kp R   &kp T                                           &kp Y             &kp U  &lt 5 I    &kp O    &kp P
+&kp A    &kp S         &kp D             &kp F   &kp G                            &kp MINUS      &kp H             &kp J  &kp K      &kp L    &kp SQT
+&kp Z    &kp X         &kp C             &kp V   &kp B             &lt 4 ESC      &kp SEMICOLON  &kp N             &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH
+&kp TAB  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 10  &lt 9 LANGUAGE_2  &lt 8 SPACE    &lt 1 ENTER    &lt 1 LANGUAGE_1                             &kp BACKSPACE
             >;
 
             sensor-bindings =
@@ -105,10 +105,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -123,6 +123,42 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
+        };
+
+        layer_7 {
+            bindings = <
+&kp N7  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&kp N8  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
+        layer_9 {
+            bindings = <
+&kp N9  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
+        layer_10 {
+            bindings = <
+&kt N0  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
         };
     };
 };
