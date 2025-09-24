@@ -14,7 +14,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        mbt3 {
+            bindings = <&mkp MB3>;
+            key-positions = <17 18>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -49,10 +56,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E             &kp R           &kp T                                           &kp Y             &kp U  &lt 5 I    &kp O    &kp P
-&kp A      &kp S         &kp D             &kp F           &kp G                            &kp F5         &kp H             &kp J  &kp K      &kp L    &kp SQT
-&kp Z      &kp X         &kp C             &kp V           &kp B             &lt 6 ESC      &kp BACKSPACE  &kp N             &kp M  &kp COMMA  &kp DOT  &lt 4 SLASH
-&lt 1 TAB  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &lt 5 LANGUAGE_2  &lt 2 SPACE    &lt 1 ENTER    &lt 3 LANGUAGE_1                             &kp MINUS
+&kp Q      &kp W         &kp E             &kp R               &kp T                                           &kp Y             &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S         &kp D             &kp F               &kp G                            &kp F5         &kp H             &kp J  &kp K      &lt 5 L  &lt 5 SQT
+&kp Z      &kp X         &kp C             &kp V               &kp B             &lt 6 ESC      &kp BACKSPACE  &kp N             &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&lt 6 ESC  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_SHIFT TAB  &lt 5 LANGUAGE_2  &lt 2 SPACE    &lt 1 ENTER    &lt 3 LANGUAGE_1                             &kp MINUS
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -72,7 +79,7 @@
         number {
             bindings = <
 &kp EQUAL        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                           &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
-&kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS                  &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+&kp DOT          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS                  &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
 &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp ASTERISK  &kp SLASH    &trans  &trans  &trans  &trans  &trans  &trans
 &trans           &trans           &trans           &trans           &trans        &trans       &trans  &trans                          &trans
             >;
@@ -93,21 +100,21 @@
 
         mouse {
             bindings = <
-&trans     &trans          &msc SCRL_UP    &trans           &trans                              &trans  &trans  &trans    &trans    &trans
-&kp LG(A)  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans                      &trans  &trans  &trans  &mkp MB3  &mkp MB4  &trans
-&trans     &kp LG(X)       &kp LG(C)       &kp LG(V)        &trans            &trans    &trans  &trans  &trans  &mkp MB1  &mkp MB2  &trans
+&trans     &trans          &msc SCRL_DOWN  &trans           &trans                              &trans  &trans    &trans    &trans  &trans
+&kp LG(A)  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &trans                      &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans
+&trans     &kp LG(X)       &kp LG(C)       &kp LG(V)        &trans            &trans    &trans  &trans  &mkp MB3  &mkp MB4  &trans  &trans
 &trans     &trans          &trans          &trans           &kp LEFT_COMMAND  &trans    &trans  &trans                              &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
         };
 
-        shortcut {
+        shortcut_and_mouse {
             bindings = <
-&none      &none      &kp LG(LS(NUMBER_3))  &kp LG(LS(NUMBER_4))  &none                      &none  &none  &none  &none  &none
-&kp LG(A)  &kp LG(S)  &none                 &none                 &none               &none  &none  &none  &none  &none  &none
-&none      &kp LG(X)  &kp LG(C)             &kp LG(V)             &kp LG(B)  &none    &none  &none  &none  &none  &none  &kp LG(FSLH)
-&none      &none      &none                 &none                 &none      &none    &none  &none                       &none
+&none      &none      &kp LG(LS(NUMBER_3))  &kp LG(LS(NUMBER_4))  &none                      &none  &none     &none     &none  &none
+&kp LG(A)  &kp LG(S)  &none                 &none                 &none               &none  &none  &mkp MB1  &mkp MB2  &none  &none
+&kp LG(Z)  &kp LG(X)  &kp LG(C)             &kp LG(V)             &kp LG(B)  &none    &none  &none  &mkp MB3  &mkp MB4  &none  &kp LG(FSLH)
+&none      &none      &none                 &none                 &none      &none    &none  &none                             &none
             >;
 
             sensor-bindings = <&scroll_up_down>;
